@@ -2,8 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import About from './sections/About';
-import Timeline from './sections/Timeline';
+import About from './sections/About/About';
+import Timeline from './sections/Timeline/Timeline';
 
 function App() {
 
