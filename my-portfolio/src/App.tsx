@@ -2,22 +2,39 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import About from './sections/About';
+import Timeline from './sections/Timeline';
+
 function App() {
+
+  const careerEvents = [
+    {
+      year: 2020,
+      title: '大学 入学',
+      description: '工学部情報工学科に入学しました。'
+    },
+    {
+      year: 2022,
+      title: 'インターンシップ',
+      description: 'ソフトウェア開発会社でのインターンシップに参加しました。'
+    },
+    // 他のイベントを追加
+  ];
+
   return (
-    <div className="App">
+    <div className='App'>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* 各セクションのコンポーネントを配置 */}
+          <About
+            name="Wato Tasuku"
+            age={20}
+            university="Meijo University"
+            department="Information Engineering"
+            />
+          <Timeline events={careerEvents} />
+
+          
+          <p>Welcome to Wato's Portfolio</p>
       </header>
     </div>
   );
